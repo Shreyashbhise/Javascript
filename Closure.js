@@ -11,19 +11,21 @@ function x() {
 }
 x();
 
+// Using let
 
-function y () {
-    for (var i = 1; i<=5; i++) {
-        function me(i) {
-            setTimeout(function() {
-                console.log(i);
-            }, i * 1000);
-        }
-        me(i);
+function x() {
+    for (let i = 1; i <= 5; i++) {
+        
+        setTimeout(function () {
+            console.log(i);
+        }, i*1000);
+
     }
-    console.log("Hello Javascript")
+
+    console.log("Namaste javascript");
 }
-y();
+
+x();
 
 
 // Intrview question
