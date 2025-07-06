@@ -1,37 +1,33 @@
+🔁 Real-Life Analogy:
+A Promise is like ordering food at a restaurant:
 
+You place an order → (this creates the promise)
 
-// let fetchData = new Promise((resolve,reject)=> {
-//     setTimeout(()=> {
-//         resolve("Data fetched successfully");
-//     },1000)
-// });
+You wait patiently → (asynchronous)
 
-// fetchData
-//      .then(result => console.log(result))
-//      .catch(error=> console.log(error));
-     
+You either get food (✅ resolved) or hear “we’re out of that” (❌ rejected)
 
-// function fetchData(success) {
-//     return new Promise((resolve,reject) => {
-//         setTimeout(() => {
-//             if (success) {
-//                 resolve("Data fetched successfully")
-//             }
-//             else {
-//                 reject("Error: Unable to fethed data")
-//             }
-//         },2000);
-//     })
-// }
+✅ Example:
+const getData = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Data received");
+    }, 1000);
+  });
+};
 
-// fetchData(true)
-//  .then(() => {
-//     console.log(data)
-//  })
-//  .catch((error) => {
-//     console.log(error);
-//  })
-//  .finally(() => {
-//     console.log("Fetched attempt  complete")
-//  });
+getData().then((data) => {
+  console.log(data); // Output: Data received
+});
 
+❌ Handling Errors with .catch():
+js
+Copy
+Edit
+getData()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log("Error:", error);
+  });
