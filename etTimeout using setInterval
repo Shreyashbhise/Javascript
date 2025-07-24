@@ -1,0 +1,16 @@
+
+✅ Custom setTimeout using setInterval
+
+function customSetTimeout(callback, delay) {
+  const intervalId = setInterval(() => {
+    callback();
+    clearInterval(intervalId); // Stop after one execution
+  }, delay);
+}
+🔹 Example Usage:
+javascript
+Copy
+Edit
+customSetTimeout(() => {
+  console.log("Executed after 2 seconds");
+}, 2000);
