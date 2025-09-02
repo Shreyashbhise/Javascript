@@ -34,3 +34,20 @@ function Banait(){
     console.log("processing Data");
 }
 Rutuja(Banait);
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+ function fetchData(callback) {
+  console.log("Fetching data...");
+
+  setTimeout(() => {
+    console.log("Data fetched!");
+    callback(); // call callback after data is fetched
+  }, 2000);
+}
+
+function processData() {
+  console.log("Processing data...");
+}
+
+fetchData(processData);
