@@ -8,6 +8,7 @@ You wait patiently → (asynchronous)
 You either get food (✅ resolved) or hear “we’re out of that” (❌ rejected)
 
 ✅ Example:
+
 const getData = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -21,9 +22,7 @@ getData().then((data) => {
 });
 
 ❌ Handling Errors with .catch():
-js
-Copy
-Edit
+
 getData()
   .then((data) => {
     console.log(data);
