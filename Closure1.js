@@ -9,3 +9,18 @@ function outerfunction() {
 
 const closureExample = outerfunction();
 closureExample();
+
+
+
+function func1() {
+    let a = 5;
+
+    function func2() {
+        console.log(a);
+    }
+    a = 8;
+    return func2;
+}
+
+const abc = func1();
+abc();
