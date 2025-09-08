@@ -3,7 +3,9 @@ Reduces the array to a single value by applying a function.
 
 ✅ Example:
 
-const numbers = [1, 2, 3, 4];
-const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+const arr3 = [2,4,5,6];
+const newValue = arr3.reduce((prev, curr) => {
+    return prev+curr;
+})
 
-console.log(sum); // 10
+console.log(newValue);
