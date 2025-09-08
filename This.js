@@ -2,9 +2,7 @@
 
 console.log(this); // In browser => window
 🔹 2. Global Scope (strict mode)
-js
-Copy
-Edit
+
 "use strict";
 console.log(this); // undefined
 
